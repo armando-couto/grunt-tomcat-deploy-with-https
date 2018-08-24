@@ -1,7 +1,7 @@
 {
   "name": "grunt-tomcat-deploy-with-https",
   "description": "A grunt task for code deployment over the Tomcat Admin Web Application.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/armando-couto/grunt-tomcat-deploy-with-https",
   "author": {
     "name": "Armando Couto",
