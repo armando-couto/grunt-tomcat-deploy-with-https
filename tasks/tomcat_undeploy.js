@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 
     var content = '';
 
-    var req = require('http').request(options, function(res) {
+    var req = require('https').request(options, function(res) {
       res.setEncoding('utf8');
       res.on('data', function (chunk) {
         content += chunk;

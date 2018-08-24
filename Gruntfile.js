@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       login: 'tomcat',
       password: 'tomcat',
       path: '/myapp',
-      port: 8080,
+      port: 443,
       dist: 'dist',
       deploy: '/manager/text/deploy',
       undeploy: '/manager/text/undeploy',

@@ -1,4 +1,4 @@
-# grunt-tomcat-deploy
+# grunt-tomcat-deploy-with-https
 
 This is a [grunt](https://github.com/gruntjs/grunt) task for code deployment over the Tomcat Admin Web Application.
 
@@ -10,13 +10,13 @@ This plugin requires Grunt `~0.4.1`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-tomcat-deploy --save-dev
+npm install grunt-tomcat-deploy-with-https --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-tomcat-deploy');
+grunt.loadNpmTasks('grunt-tomcat-deploy-with-https');
 ```
 
 ## The "tomcat_deploy" task
@@ -31,7 +31,7 @@ grunt.initConfig({
     login: 'xxxxx',
     password: 'yyyyy',
     path: '/myapp',
-    port: 8080,
+    port: 443,
     dist: 'dist',
     deploy: '/manager/text/deploy',
     undeploy: '/manager/text/undeploy',

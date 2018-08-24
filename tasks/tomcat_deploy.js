@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     
     var content = '';
 
-    var req = require('http').request(options, function(res) {
+    var req = require('https').request(options, function(res) {
       res.setEncoding('utf8');
       res.on('data', function (chunk) {
         content += chunk;
@@ -79,14 +79,14 @@ module.exports = function(grunt) {
   });
   var redeploy = function (done ) {
     var tomcat = grunt.config('tomcat_deploy');
-    var http = require('http'),
+    var https = require('https'),
       options = {
         host: tomcat.host,
         port: tomcat.port,
         path: tomcat.path
       };
 
-    var thing = http.get(options, function(res) {
+    var thing = https.get(options, function(res) {
       if( res.statusCode === 404) {
         grunt.log.ok("tomcat_undeploy: Nothing to undeploy");
         grunt.task.run('tomcat_deploy');
